@@ -1,1 +1,115 @@
+## 📘 My Personal Notes
+
+### 🗓️ Week 1: Introduction to Database (DB)
+
+#### 📍 Definition and Purpose of Database
+Diawal pertemuan mata kuliah Sistem Basis Data(SBD) kita membahas tentang Database(db) vs Database Management System(DBMS).
+Database(db) adalah kumpulan data yang terstruktur, sedangkan DBMS merupakan software yang mengatur dan berinteraksi dengan data yang kita miliki.
+Database bisa diandaikan sebagai buku dan DBMS sebagai alat untuk membaca, menulis, dan mengatur/mengelola isi atau content buku tersebut.
+
+Database MAnagement System(DBMS): Menyimpan, mengambil, mendefinisikan, mengelola data yang terdapat di Database.
+*Komponen dari DBMS adalah
+- Kumpulan data yang saling berkaitan.
+- Program untuk mengakses data.
+- Praktis dan efesien.
+*Karakteristik dari data yang dikelola: Highly valuable, relatively large dan multiple access points.
+*Modern DB System:
+- Dapat menghandle/mengatur data yang terstruktur dan yang tidak terstruktur.
+- Kita tidak akan terlepas(akan selalu terikat) dengan data.
+
+DB Application Examples
+*Infomasi/data dalam suatu usaha
+- Sales: Costumer, produk, pembelian
+- Accounting/akuntansi: Pembayaran, nota, assets
+- Human Resources: Informasi mengenai pegawai, gaji, pembayaran pajak.
+*Data dalam Universities: registrasi, nilai.
+
+DBMS berfungsi dan menghindari:
+- Data Redundancy: Informasi data bisa diduplicate menggunakan file yang berbeda, mengakibatkan banyak file yang akan menyimpan data yang sama. Cth: data kostumer yang muncul difile yang berbeda.
+- Inconsistency: Data tidak konsisten karena data terduplicate dan ada yang tidak ter-update isi dari datanya.
+- Sulit untuk mengakses data
+- Kesulitan/kesusahan untuk membuat program baru
+- Data Isolation
+- Integrity Problems
+- Challenge with Constraints
+- Atomicity of Updates
+- Concurrent acess Issues
+- Security problems
+
+#### 📍 View of Data (VOD)
+*Data models:  Sebuah blueprint yang berguna untuk mendesign suatu database.
+*Data abstraction: Menutupi kerumitan dari struktur sebuah data. Database yang digunakan harus disederhakan dan dipermudahkan agar mudah dipahami.
+
+VOD - Data models
+-Data: Informasi awal yang akan disimpan di database.
+-D. relationship: Menjelaskan bagaimana data yang berbeda bisa berhubungan satu sama lain.
+-D. semantic: Arti dari data tersebut. Cth: Mengerti bahwa data tersebut merepresentasikan tanggal enrrollment murid tersebut.
+-D. constraints: Peraturan yang dubuat agar data tersebut sesuai. Cth: umur murid tidak bisa minus(-).
+
+VOD - Data Models Types 
+-Relational: Mengatur/memasukkan data kedalam tabel
+  -Relationak model
+    1. All data is stored in various tables
+    2. Example of tabular data un ghe rslationak mode,
+-Entity-Relationship: Merepresentasikan entities dan bagaimana mereka berhubungan satu sama lain, divisualisasikan menggunakan ER diagrams
+-Object-based:  -Object Oriented
+                -Object Relational
+-Semi-Structured
+
+VOD - Abstraction
+-Physical level: Menjelaskan bagaimana record(cth. instructor) dimasukkan/stored
+-Logical level: Menjelaskan data yang disimpan di database dan apa hubungan antar data
+-View level: Menyembunyikan/melindungi detail dari sebuah tipe data.
+
+Data Definition Language(DDL)
+*Data dictionary mengandung tentang metadata (data tentang data)
+  -Skema Database
+  -Integrity constraints: Primary key (ID uniquely identifies instructors)
+  -Authorization (who can access what)
+
+#### 📍 DB Languages, Design, Architecture, and Users and Administrator
+SQL Query Language is nonprocedural, A query takes as input several tables(possibly only one) and always return a single table.
+SQL is designed specifically fro managing and querying data in relational databases.
+
+SQL Limitations:
+-Can't take dynamic input from users
+-Doesn't dictate how the results displayed to end users
+
+Solutions:
+Dynamic SQL or parameterized queries are used. Generated on-the-fly and can change based on user input or programmatic conditions.
+
+Database Design
+*LOGICAL DESIGN = the process of creating a conceptual schema based on the data, how to arrange the attributes of the entities in a given business environment into database structures, such as the tables of a relational database. 
+Key components:
+-Entity: A chunk of information / data tersebut sendiri
+-Relationship: Hubungan antara sebuah entity dengan entity lainnya, juga antara sebuah entity dengan atribut2nya
+-Attribute: Komponen dari entity yang mendefines uniqueness of an entity (metadata)
+
+*PHYSICAL DESIGN = membuat rancangan model data yang sudah ada menjadi database yang sesungguhnya, meng-organisir suatu file.
+Key Components:
+-Tables and indexes:
+  Tabel: memberikan kemudahan dalam membaca data karena tersusun dengan sistematis sehingga memahaminya juga akan lebih mudah, untuk mencari apakah ada data yang terhubung / data yang sama dari tabel lain.
+  Index: sebuah objek dalam sistem database yang dapat mempercepat proses pencarian (query) data.
+-Storage: Mengidentifikasi struktur penyimpanan khusus dan metode akses untuk mengambil data secara efisien. Misalnya, menambahkan indeks sekunder ke suatu relasi.
+-Security: Merancang fitur keamanan untuk sistem database termasuk pembuatan akun, pemberian / pencabutan hak, perlindungan akses, dan penetapan tingkat keamanan. ( mengamankan file).
+
+DATABASE APPLICATIONS
+Database applications are usually partitioned into two or three parts
+• Two-tier architecture - the application resides at the dient machine, where itinvokes database system funtionally at the server machine
+• Three-tier architecture - the dient machine ads as a front end and does not contain any direct database calk.
+    -The client end communicates with an application server, usual through a forms interface.
+    -The application server in tum communicates with a database system to access data.
+
+-USER
+
+
+A person who has central control over the system is called a database administrator (OBA), Functions of a DBA indude:
+-Schema definition
+-Storage structure and access-method definition
+-Schema and physical-organization modification
+-Granting of authorization for data access
+-Routine maintenance
+-Periodically backing up the database
+-Ensuring that enough free disk space is avaladble for nomad operations, and upgrading disk space as required
+-Monitoring jobs running on the database
 
